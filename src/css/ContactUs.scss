@@ -10,4 +10,13 @@
   text-align: center;
   color: #fff;
   padding: 2rem;
+
+  &-toggle {
+    @include toggle-style;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $black;
+    }
+  }
 }

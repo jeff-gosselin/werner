@@ -1,5 +1,21 @@
 /* Colors */
 $black: rgb(13, 13, 15);
+$white: rgb(228, 229, 231);
 $dk-blue: rgb(59, 50, 69);
 $md-blue: rgb(97, 104, 112);
 $lt-blue: rgb(147, 136, 168);
+
+/* AboutUs & ContactUs Toggle Button */
+$toggle-ht: 1rem; // height
+
+@mixin toggle-style {
+  position: absolute;
+  top: -$toggle-ht;
+  left: 0;
+  height: $toggle-ht;
+  width: 100%;
+  border: none;
+  color: $white;
+  background-color: $md-blue;
+  transition-duration: 0.5s;
+}
