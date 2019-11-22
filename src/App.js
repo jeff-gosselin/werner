@@ -10,7 +10,7 @@ import Image from "./components/Image";
 import Gallery from "./components/Gallery";
 
 // Stylesheet
-import "./css/App.css";
+import "./css/App.scss";
 
 function App() {
   return (

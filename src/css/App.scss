@@ -1,0 +1,15 @@
+.App {
+  display: flex;
+  #left-pane {
+    position: relative;
+    width: 40vw;
+    height: 100vh;
+    background-color: #fff;
+  }
+
+  #right-pane {
+    width: 60vw;
+    height: 100vh;
+    background-color: rgb(141, 141, 141);
+  }
+}

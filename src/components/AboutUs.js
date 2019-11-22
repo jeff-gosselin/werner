@@ -1,11 +1,14 @@
 import React from "react";
 
-const SocialMedia = () => {
+// Stylesheet
+import "../css/AboutUs.scss";
+
+const AboutUs = () => {
   return (
-    <div>
-      <h1>SocialMedia</h1>
+    <div className="about">
+      <h1>AboutUs</h1>
     </div>
   );
 };
 
-export default SocialMedia;
+export default AboutUs;

@@ -1,0 +1,13 @@
+@import "./_variables.scss";
+
+.contact {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  background-color: $dk-blue;
+  border-left: 1px solid #fff;
+  text-align: center;
+  color: #fff;
+  padding: 2rem;
+}
