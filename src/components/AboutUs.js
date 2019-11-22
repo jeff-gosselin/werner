@@ -7,7 +7,7 @@ const AboutUs = () => {
   return (
     <div className="about">
       <button className="about-toggle">^</button>
-      <h1>AboutUs</h1>
+      <h2>About Us</h2>
     </div>
   );
 };

@@ -1,0 +1,9 @@
+@import "./variables";
+
+.greeting {
+  margin: 3rem;
+
+  h1 {
+    color: $black;
+  }
+}

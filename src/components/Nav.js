@@ -1,5 +1,8 @@
 import React from "react";
 
+// Stylesheet
+import "../css/Nav.scss";
+
 const Nav = () => {
   return (
     <nav>

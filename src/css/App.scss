@@ -4,6 +4,9 @@
   display: flex;
   #left-pane {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 40vw;
     height: 100vh;
     min-width: 300px;

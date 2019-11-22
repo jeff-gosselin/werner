@@ -1,9 +1,12 @@
 import React from "react";
 
+// Stylesheet
+import '../css/Greeting.scss';
+
 const Greeting = () => {
   return (
-    <div>
-      <h1>Greeting</h1>
+    <div className="greeting">
+      <h1>Bringing more to your wall or floor!</h1>
     </div>
   );
 };
