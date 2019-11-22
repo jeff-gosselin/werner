@@ -1,5 +1,8 @@
 import React from "react";
 
+// Components
+import Swatch from "./Swatch";
+
 const Gallery = () => {
   return (
     <div>
