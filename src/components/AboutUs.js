@@ -1,4 +1,6 @@
 import React from "react";
+
+// React Icons
 import { FaChevronUp } from "react-icons/fa";
 
 // Stylesheet

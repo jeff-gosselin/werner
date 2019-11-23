@@ -1,10 +1,24 @@
 nav {
-  position: fixed;
-  left: 2rem;
+  position: absolute;
+  padding: 0 2.5rem;
   top: 2rem;
+  width: 100%;
 
   ul {
     display: flex;
+    justify-content: flex-end;
     list-style: none;
+
+    li {
+      padding-right: 4rem;
+
+      &:first-child {
+        margin-right: auto;
+      }
+
+      &:last-child {
+        font-size: 1.25rem;
+      }
+    }
   }
 }
