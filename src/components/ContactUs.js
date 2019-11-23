@@ -1,4 +1,5 @@
 import React from "react";
+import { FaChevronUp } from "react-icons/fa";
 
 // Stylesheet
 import "../css/ContactUs.scss";
@@ -6,7 +7,9 @@ import "../css/ContactUs.scss";
 const ContactUs = () => {
   return (
     <div className="contact">
-      <button className="contact-toggle">^</button>
+      <button className="contact-toggle">
+        <FaChevronUp />
+      </button>
       <h2>Contact Us</h2>
     </div>
   );

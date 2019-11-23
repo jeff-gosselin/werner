@@ -8,15 +8,10 @@
   background-color: $dk-blue;
   border-left: 1px solid #fff;
   text-align: center;
-  color: #fff;
+  color: $white;
   padding: 1.25rem;
 
   &-toggle {
     @include toggle-style;
-
-    &:hover {
-      cursor: pointer;
-      background-color: $black;
-    }
   }
 }

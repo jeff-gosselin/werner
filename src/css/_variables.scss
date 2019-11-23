@@ -9,13 +9,23 @@ $lt-blue: rgb(147, 136, 168);
 $toggle-ht: 1rem; // height
 
 @mixin toggle-style {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   top: -$toggle-ht;
   left: 0;
   height: $toggle-ht;
   width: 100%;
   border: none;
-  color: $white;
+  color: rgba($white, 0.35);
   background-color: $md-blue;
   transition-duration: 0.25s;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $black;
+    color: $white;
+  }
 }
