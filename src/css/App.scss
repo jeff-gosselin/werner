@@ -2,20 +2,22 @@
 
 .App {
   display: flex;
+  height: 100vh;
+
   #left-pane {
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 42vw;
-    height: 100vh;
+    height: 100%;
     min-width: 400px;
     background-color: #fff;
   }
 
   #right-pane {
     width: 58vw;
-    height: 100vh;
+    height: 100%;
     background-color: $lt-blue;
   }
 }

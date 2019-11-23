@@ -1,5 +1,20 @@
+@import "./_variables.scss";
+
 .search {
   position: fixed;
-  right: 2rem;
+  right: 3rem;
   top: 2rem;
+
+  form {
+    display: none;
+  }
+
+  i {
+    color: $black;
+    font-size: 1.25rem;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
 }
