@@ -17,7 +17,7 @@
     @include toggle-style;
   }
 
-  &-form {
+  &-content {
     opacity: 0;
     animation: fadeIn 1s ease 1.5s 1 forwards;
   }
@@ -26,6 +26,14 @@
 /* Animations */
 .expand {
   animation: expand 1.5s ease 1 forwards;
+}
+
+.contract {
+  animation: contract 1.5s ease 1 forwards;
+}
+
+.hide {
+  opacity: 0;
 }
 
 @keyframes expand {
@@ -45,6 +53,26 @@
     width: 100%;
     height: calc(100% - #{$toggle-ht});
     z-index: 10;
+  }
+}
+
+@keyframes contract {
+  0% {
+    width: 100%;
+    height: calc(100% - #{$toggle-ht});
+    z-index: 10;
+  }
+
+  50% {
+    width: 50%;
+    height: calc(100% - #{$toggle-ht});
+    z-index: 10;
+  }
+
+  100% {
+    width: 50%;
+    height: $about-contact-ht;
+    z-index: 1;
   }
 }
 

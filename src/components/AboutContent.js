@@ -4,12 +4,12 @@ import React from "react";
 import "../css/ContactUs.scss";
 
 // This component goes inside of the ContactUs component
-const ContactContent = () => {
+const AboutContent = () => {
   return (
-    <div className="contact-content">
-      <h1>Contact Content</h1>
+    <div className="about-content">
+      <h1>About Content</h1>
     </div>
   );
 };
 
-export default ContactContent;
+export default AboutContent;
