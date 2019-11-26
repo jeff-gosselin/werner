@@ -1,4 +1,4 @@
-@import "./_variables.scss";
+@import "./_globals.scss";
 
 /**** Styles for the Content of Both Drawers */
 .drawer-content {
@@ -150,16 +150,6 @@
     width: 50%;
     height: $about-contact-ht;
     z-index: 1;
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
   }
 }
 

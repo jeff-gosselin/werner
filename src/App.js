@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 // Component Imports
 import Nav from "./components/Nav";
@@ -19,16 +19,30 @@ function App() {
   const [expand, toggleExpand] = useToggle(false);
   const [animationEnabled, setAnimationEnabled] = useAnimations(false);
 
+  useEffect(() => {
+    return setAnimationEnabled;
+  }, [expand]);
+
   return (
     <div className="App">
-      <div id="left-pane" className={expand ? "lt-pane-expand" : null}>
+      <div
+        id="left-pane"
+        className={
+          expand ? "lt-pane-expand" : animationEnabled ? "lt-pane-shrink" : null
+        }
+      >
         <Nav toggleExpand={toggleExpand} />
         <Gallery />
-        <Greeting />
+        {!expand ? <Greeting toggle={expand} /> : null}
         <Drawer name={"about"} />
         <Drawer name={"contact"} />
       </div>
-      <div id="right-pane" className={expand ? "rt-pane-contract" : null}>
+      <div
+        id="right-pane"
+        className={
+          expand ? "rt-pane-shrink" : animationEnabled ? "rt-pane-expand" : null
+        }
+      >
         <Search />
         <Image />
       </div>
