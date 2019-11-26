@@ -18,7 +18,7 @@
   border-right: 1px solid #fff;
   text-align: center;
   color: $white;
-  padding: 1.25rem;
+  padding: 1.25rem 0;
 
   h2 {
     text-transform: capitalize;
@@ -33,23 +33,21 @@
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
-    padding: 2rem;
+    padding: 1rem 3rem;
+    height: 100%;
+    overflow: scroll;
 
     &-image {
       position: relative;
-      background: url("https://img-aws.ehowcdn.com/750x428p/s3-us-west-1.amazonaws.com/contentlab.studiod/getty/a6bc53b2e10449e3ac89ee708c8ca884.jpg");
+      background: url("https://sundialins-staging.websitesrvr.com/wp-content/uploads/sites/341/2018/03/5-Tips-for-Saving-Money-on-Employee-Benefits.jpg");
       width: 100%;
-      height: 250px;
+      min-height: 200px;
       background-size: cover;
-
-      img {
-        position: absolute;
-        bottom: 0;
-      }
+      background-position: center;
     }
 
     h3 {
-      margin-top: 2rem;
+      margin-top: 2.5rem;
       font-size: 1.35rem;
       font-weight: 500;
     }
