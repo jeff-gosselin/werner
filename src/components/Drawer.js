@@ -36,7 +36,11 @@ const Drawer = props => {
       <button onClick={toggleExpand} className={`${props.name}-toggle`}>
         {expand ? <FaChevronDown /> : <FaChevronUp />}
       </button>
-      <h2>{`${props.name} Us`}</h2>
+      <h2
+        className={
+          expand ? "grow-text" : animationEnabled ? "shrink-text" : null
+        }
+      >{`${props.name} Us`}</h2>
       {expand ? (
         props.name === "about" ? (
           <AboutContent />

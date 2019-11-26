@@ -1,13 +1,20 @@
 import React from "react";
 
 // Stylesheet
-import "../css/ContactUs.scss";
+import "../css/Drawer.scss";
 
-// This component goes inside of the ContactUs component
+// This component goes inside the Drawer component
 const ContactContent = () => {
   return (
     <div className="drawer-content">
-      <h1>Contact Content</h1>
+      <div className="contact-content">
+        <form>
+          <input type="text" placeholder="Name" />
+          <input type="email" placeholder="Email" />
+          <textarea placeholder="Message" />
+          <button>Send</button>
+        </form>
+      </div>
     </div>
   );
 };
