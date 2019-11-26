@@ -11,7 +11,7 @@ const Nav = props => {
     <nav>
       <ul>
         <li>Werner</li>
-        <li onClick={props.toggleExpand}>Shop</li>
+        <li onClick={props.toggleExpand}>{props.toggle ? "Home" : "Shop"}</li>
         <li>
           <FaShoppingBasket />
         </li>

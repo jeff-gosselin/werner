@@ -31,9 +31,11 @@ function App() {
           expand ? "lt-pane-expand" : animationEnabled ? "lt-pane-shrink" : null
         }
       >
-        <Nav toggleExpand={toggleExpand} />
-        <Gallery />
-        {!expand ? <Greeting toggle={expand} /> : null}
+        <Nav toggleExpand={toggleExpand} toggle={expand} />
+        <Gallery toggle={expand} />
+        {!expand ? (
+          <Greeting toggleExpand={toggleExpand} toggle={expand} />
+        ) : null}
         <Drawer name={"about"} />
         <Drawer name={"contact"} />
       </div>

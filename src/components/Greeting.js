@@ -11,7 +11,7 @@ const Greeting = props => {
         Take a look at our wide selection of flooring, blah blah wood, ceramic
         and blah.
       </p>
-      <button>Explore</button>
+      <button onClick={props.toggleExpand}>Explore</button>
     </div>
   );
 };
