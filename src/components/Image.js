@@ -4,11 +4,7 @@ import React from "react";
 import "../css/Image.scss";
 
 const Image = () => {
-  return (
-    <div id="image-box">
-      <h1>Image</h1>
-    </div>
-  );
+  return <div id="image-box"></div>;
 };
 
 export default Image;

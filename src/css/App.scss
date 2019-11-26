@@ -21,3 +21,32 @@
     background-color: $lt-blue;
   }
 }
+
+/**** Animations */
+.lt-pane-expand {
+  animation: expandLeft 1.5s ease 0s 1 forwards;
+}
+
+.rt-pane-contract {
+  animation: contractRight 1.5s ease 0s 1 forwards;
+}
+
+@keyframes expandLeft {
+  0% {
+    width: 42vw;
+  }
+
+  100% {
+    width: 100vw;
+  }
+}
+
+@keyframes contractRight {
+  0% {
+    width: 58vw;
+  }
+
+  100% {
+    width: 0vw;
+  }
+}

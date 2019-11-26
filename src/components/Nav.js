@@ -6,12 +6,12 @@ import { FaShoppingBasket } from "react-icons/fa";
 // Stylesheet
 import "../css/Nav.scss";
 
-const Nav = () => {
+const Nav = props => {
   return (
     <nav>
       <ul>
         <li>Werner</li>
-        <li>Shop</li>
+        <li onClick={props.toggleExpand}>Shop</li>
         <li>
           <FaShoppingBasket />
         </li>

@@ -3,7 +3,7 @@
 /**** Styles for the Content of Both Drawers */
 .drawer-content {
   opacity: 0;
-  animation: fadeIn 1s ease 1.45s 1 forwards;
+  animation: fadeIn 0.75s ease 1.15s 1 forwards;
   height: calc(100% - #{$about-contact-ht});
 }
 
@@ -98,19 +98,19 @@
 
 /**** Drawer Animations */
 .expand {
-  animation: expand 1.5s ease 1 forwards;
+  animation: expand 1.2s ease 1 forwards;
 }
 
 .contract {
-  animation: contract 1.5s ease 1 forwards;
+  animation: contract 1.2s ease 1 forwards;
 }
 
 .grow-text {
-  animation: grow 0.75s ease-out 0.75s 1 forwards;
+  animation: grow 0.6s ease-out 0.6s 1 forwards;
 }
 
 .shrink-text {
-  animation: shrink 0.75s ease 0s 1 forwards;
+  animation: shrink 0.6s ease 0s 1 forwards;
 }
 
 @keyframes expand {
