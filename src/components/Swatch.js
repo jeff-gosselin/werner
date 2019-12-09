@@ -1,9 +1,9 @@
 import React from "react";
 
-const Swatch = () => {
+const Swatch = props => {
   return (
     <div>
-      <h1>Swatch</h1>
+      <h1>{props.product.name}</h1>
     </div>
   );
 };
