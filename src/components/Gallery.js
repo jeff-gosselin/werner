@@ -6,10 +6,10 @@ import Swatch from "./Swatch";
 // Stylesheet
 import "../css/Gallery.scss";
 
-const Gallery = () => {
+const Gallery = props => {
   return (
-    <div className="gallery">
-      <h1>Gallery</h1>
+    <div className={props.toggle ? "gallery show" : "gallery hide"}>
+      <h1>{props.products[0].name}</h1>
     </div>
   );
 };

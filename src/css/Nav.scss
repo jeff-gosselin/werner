@@ -1,22 +1,30 @@
+@import "./_globals.scss";
+
 nav {
   position: absolute;
-  padding: 0 2.5rem;
+  padding: 0 0rem 0 3rem;
   top: 2rem;
   width: 100%;
 
   ul {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     list-style: none;
+    font-size: 1.1rem;
+    color: $dk-blue;
 
     li {
-      margin-right: 4rem;
+      margin-right: 3rem;
+      line-height: 0;
 
       &:first-child {
         margin-right: auto;
       }
 
       &:last-child {
+        position: relative;
+        top: -4.5px;
         font-size: 1.3rem;
       }
 

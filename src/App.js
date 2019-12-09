@@ -1,4 +1,7 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
+
+// Data
+import Inventory from "./data";
 
 // Component Imports
 import Nav from "./components/Nav";
@@ -18,10 +21,17 @@ import "./css/App.scss";
 function App() {
   const [expand, toggleExpand] = useToggle(false);
   const [animationEnabled, setAnimationEnabled] = useAnimations(false);
+  const [products, setProducts] = useState([...Inventory]);
+
+  useEffect(() => {
+    return setProducts([...Inventory]);
+  }, []);
 
   useEffect(() => {
     return setAnimationEnabled;
   }, [expand]);
+
+  console.log(products);
 
   return (
     <div className="App">
@@ -32,7 +42,7 @@ function App() {
         }
       >
         <Nav toggleExpand={toggleExpand} toggle={expand} />
-        <Gallery toggle={expand} />
+        <Gallery toggle={expand} products={products} />
         {!expand ? (
           <Greeting toggleExpand={toggleExpand} toggle={expand} />
         ) : null}
