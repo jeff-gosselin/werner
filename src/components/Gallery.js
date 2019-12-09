@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import GalleryNav from "./GalleryNav";
 
 // Components
@@ -11,8 +11,10 @@ const Gallery = props => {
   console.log("Props", props.products);
 
   let ceramics = props.products.filter(product => product.type === "ceramic");
-  let stone = props.products.filter(product => product.type === "stone");
-  let wood = props.products.filter(product => product.type === "wood");
+  let stones = props.products.filter(product => product.type === "stone");
+  let woods = props.products.filter(product => product.type === "wood");
+
+  const { floorType, setFloorType } = useState("");
 
   return (
     <div className={props.toggle ? "gallery show" : "gallery hide"}>
