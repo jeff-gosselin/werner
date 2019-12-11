@@ -17,16 +17,26 @@
     margin: 0 3rem;
     color: $gray;
 
+    .active-link {
+      background-color: $lt-blue;
+      border-radius: 2.5rem;
+
+      .material {
+        color: #fff;
+      }
+    }
+
+    .material {
+      text-decoration: none;
+      color: $gray;
+    }
+
     li {
       position: relative;
-      margin: 0 1.5rem;
-      padding: 0.25rem;
+      margin: 0.5rem 1.5rem;
+      padding: 0 0.75rem;
       font-size: 1rem;
       top: 1px;
-
-      &:hover {
-        cursor: pointer;
-      }
 
       &:last-child {
         margin-left: auto;

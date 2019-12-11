@@ -1,8 +1,23 @@
 import React from "react";
-import Gallery from "./Gallery";
 
-const GalleryContent = ({ products }) => {
-  return <div>{products}</div>;
+// Components
+import GalleryNav from "./GalleryNav";
+
+// Hooks
+import useToggle from "../hooks/useToggle";
+
+const GalleryContent = ({ products, material }) => {
+  const [displayType, setDisplayType] = useToggle(false);
+  return (
+    <div>
+      <GalleryNav
+        displayType={displayType}
+        setDisplayType={setDisplayType}
+        material={material}
+      />
+      {products}
+    </div>
+  );
 };
 
 export default GalleryContent;
