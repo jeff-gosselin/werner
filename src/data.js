@@ -1,4 +1,6 @@
-const inventory = [
+export const baseURL = "http://localhost:3000";
+
+export const inventory = [
   {
     id: 1,
     name: "Oak Wire Brushed Hardwood",
@@ -32,5 +34,3 @@ const inventory = [
     size: ""
   }
 ];
-
-export default inventory;

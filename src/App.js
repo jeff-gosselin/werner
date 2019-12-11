@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 // Data
-import Inventory from "./data";
+import { baseURL, inventory } from "./data";
 
 // Component Imports
 import Nav from "./components/Nav";
@@ -21,10 +21,10 @@ import "./css/App.scss";
 function App() {
   const [expand, toggleExpand] = useToggle(false);
   const [animationEnabled, setAnimationEnabled] = useAnimations(false);
-  const [products, setProducts] = useState([...Inventory]);
+  const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    return setProducts([...Inventory]);
+    return setProducts([...inventory]);
   }, []);
 
   useEffect(() => {
@@ -55,7 +55,7 @@ function App() {
           expand ? "rt-pane-shrink" : animationEnabled ? "rt-pane-expand" : null
         }
       >
-        <Search />
+        {/* <Search /> */}
         <Image />
       </div>
     </div>
