@@ -12,29 +12,39 @@
     display: flex;
     align-items: center;
     list-style: none;
-    background-color: $lt-gray;
+    background-color: rgba($lt-gray, 0.5);
     width: 100%;
     margin: 0 3rem;
     color: $gray;
 
     .active-link {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       background-color: $lt-blue;
-      border-radius: 2.5rem;
+      border-radius: 0.25rem;
 
       .material {
         color: #fff;
+
+        .close-btn {
+          margin-left: 0.5rem;
+          font-size: 1.2rem;
+          line-height: 0;
+        }
       }
     }
 
     .material {
       text-decoration: none;
+      line-height: 0;
       color: $gray;
     }
 
     li {
       position: relative;
       margin: 0.5rem 1.5rem;
-      padding: 0 0.75rem;
+      padding: 0.275rem 0.5rem 0.235rem 0.65rem;
       font-size: 1rem;
       top: 1px;
 
@@ -43,6 +53,12 @@
         font-size: 1.5rem;
         line-height: 0;
         top: -1px;
+        color: $lt-blue;
+
+        &:hover {
+          cursor: pointer;
+          color: $black;
+        }
       }
     }
   }

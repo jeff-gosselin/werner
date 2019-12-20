@@ -1,0 +1,15 @@
+.product {
+  padding-bottom: 2rem;
+  .tile-img {
+    height: 160px;
+    width: 160px;
+  }
+
+  .details {
+    list-style: none;
+
+    span {
+      font-weight: bold;
+    }
+  }
+}

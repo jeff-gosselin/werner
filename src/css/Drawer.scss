@@ -4,7 +4,8 @@
 .drawer-content {
   opacity: 0;
   animation: fadeIn 0.75s ease 1.15s 1 forwards;
-  height: calc(100% - #{$about-contact-ht});
+  height: calc(100% - (#{$about-contact-ht} + 1rem));
+  padding-bottom: 2rem;
 }
 
 /**** Styles for About Drawer */
@@ -18,10 +19,11 @@
   border-right: 1px solid #fff;
   text-align: center;
   color: $white;
-  padding: 1.25rem 0;
+  padding-top: 0;
 
   h2 {
     text-transform: capitalize;
+    line-height: calc(#{$about-contact-ht});
   }
 
   &-toggle {
@@ -72,11 +74,12 @@
   border-left: 1px solid #fff;
   text-align: center;
   color: $white;
-  padding: 1.25rem;
   z-index: 1;
+  padding-top: 0;
 
   h2 {
     text-transform: capitalize;
+    line-height: calc(#{$about-contact-ht});
   }
 
   &-toggle {
@@ -186,19 +189,23 @@
 @keyframes grow {
   0% {
     font-size: 1.25rem;
+    padding-top: 0;
   }
 
   100% {
-    font-size: 2.25rem;
+    font-size: 1.75rem;
+    padding-top: 1rem;
   }
 }
 
 @keyframes shrink {
   0% {
-    font-size: 2.25rem;
+    font-size: 1.75rem;
+    padding-top: 1rem;
   }
 
   100% {
     font-size: 1.25rem;
+    padding-top: 0;
   }
 }

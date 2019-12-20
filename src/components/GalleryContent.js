@@ -6,6 +6,9 @@ import GalleryNav from "./GalleryNav";
 // Hooks
 import useToggle from "../hooks/useToggle";
 
+// Stylesheet
+import "../css/GalleryContent.scss";
+
 const GalleryContent = ({ products, material }) => {
   const [displayType, setDisplayType] = useToggle(false);
   return (
@@ -15,7 +18,7 @@ const GalleryContent = ({ products, material }) => {
         setDisplayType={setDisplayType}
         material={material}
       />
-      {products}
+      <div className="gallery-content">{products}</div>
     </div>
   );
 };

@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 // React Icons
 import { IoIosList } from "react-icons/io";
 import { IoMdApps } from "react-icons/io";
+import { FaRegWindowClose } from "react-icons/fa";
+import { FiXSquare } from "react-icons/fi";
 
 // Stylesheet
 import "../css/GalleryNav.scss";
@@ -19,10 +21,10 @@ const GalleryNav = ({ displayType, setDisplayType, material }) => {
           <li className="active-link">
             <div className="material" to="/ceramic">
               Ceramic
-              <Link className="material" to="/">
-                x
-              </Link>
             </div>
+            <Link className="material" to="/">
+              <FiXSquare className="close-btn" />
+            </Link>
           </li>
         ) : (
           <li>
@@ -32,16 +34,40 @@ const GalleryNav = ({ displayType, setDisplayType, material }) => {
           </li>
         )}
 
-        <li className={material === "stone" ? "active-link" : null}>
-          <Link className="material" to="/stone">
-            Stone
-          </Link>
-        </li>
-        <li className={material === "wood" ? "active-link" : null}>
-          <Link className="material" to="/wood">
-            Wood
-          </Link>
-        </li>
+        {material === "stone" ? (
+          <li className="active-link">
+            <div className="material" to="/stone">
+              Stone
+            </div>
+            <Link className="material" to="/">
+              <FiXSquare className="close-btn" />
+            </Link>
+          </li>
+        ) : (
+          <li>
+            <Link className="material" to="/stone">
+              Stone
+            </Link>
+          </li>
+        )}
+
+        {material === "wood" ? (
+          <li className="active-link">
+            <div className="material" to="/wood">
+              Wood
+            </div>
+            <Link className="material" to="/">
+              <FiXSquare className="close-btn" />
+            </Link>
+          </li>
+        ) : (
+          <li>
+            <Link className="material" to="/wood">
+              Wood
+            </Link>
+          </li>
+        )}
+
         <li onClick={setDisplayType}>
           {displayType ? <IoMdApps /> : <IoIosList />}
         </li>

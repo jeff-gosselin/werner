@@ -1,0 +1,11 @@
+@import "./globals";
+
+.gallery-content {
+  height: calc(100vh - (9.7rem + #{$about-contact-ht} + 1rem));
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: start;
+  overflow: scroll;
+  padding: 1.25rem 4rem;
+}
