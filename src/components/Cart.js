@@ -16,7 +16,7 @@ export const Cart = ({ cartItems, cartDisplay, setCartDisplay }) => {
     <div className={cartDisplay ? "cart view-cart" : "cart"}>
       <div>
         <h2>Your Cart</h2>
-        <FiXSquare onClick={setCartDisplay} />
+        <FiXSquare className="close-btn" onClick={setCartDisplay} />
         {myCart}
       </div>
     </div>

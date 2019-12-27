@@ -7,7 +7,7 @@ export const inventory = [
     imgURL: "ceramic/1.jpg",
     price: 2.15,
     type: "Ceramic",
-    size: ""
+    size: "10 x 10"
   },
   {
     id: 2,
@@ -27,27 +27,27 @@ export const inventory = [
   },
   {
     id: 4,
-    name: "Ceramic Wire Brushed Hardwood",
+    name: "Blocks Petite",
     imgURL: "ceramic/2.jpg",
-    price: 3.25,
+    price: 1.95,
     type: "ceramic",
-    size: ""
+    size: "12 x 12"
   },
   {
     id: 5,
-    name: "Stone Wire Brushed Hardwood",
+    name: "Angled Stone",
     imgURL: "stone/2.jpg",
-    price: 3.25,
+    price: 2.25,
     type: "stone",
-    size: ""
+    size: "12 x 12"
   },
   {
     id: 6,
-    name: "Oak Brushed Hardwood",
+    name: "Alleywood Pine",
     imgURL: "wood/2.jpg",
-    price: 3.25,
+    price: 3.95,
     type: "wood",
-    size: "6 x 6"
+    size: "3 x 96"
   },
   {
     id: 7,
@@ -59,19 +59,19 @@ export const inventory = [
   },
   {
     id: 8,
-    name: "Stone Wire Brushed Hardwood",
+    name: "Bleached Brick",
     imgURL: "stone/3.jpg",
-    price: 3.25,
+    price: 2.75,
     type: "stone",
     size: ""
   },
   {
     id: 9,
-    name: "Oak Brushed Hardwood",
+    name: "Diamond Cut",
     imgURL: "wood/3.jpg",
-    price: 3.25,
+    price: 2.55,
     type: "wood",
-    size: "6 x 6"
+    size: "10 x 10"
   },
   {
     id: 10,
