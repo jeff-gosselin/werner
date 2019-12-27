@@ -23,7 +23,7 @@ const Nav = props => {
           {props.toggle ? <Link to="/">Home</Link> : "Shop"}
         </li>
         <li>
-          <FaShoppingBasket />
+          <FaShoppingBasket onClick={props.setCartDisplay} />
         </li>
       </ul>
     </nav>

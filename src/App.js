@@ -10,6 +10,7 @@ import Drawer from "./components/Drawer";
 import Search from "./components/Search";
 import Image from "./components/Image";
 import Gallery from "./components/Gallery";
+import { Cart } from "./components/Cart";
 
 // Hooks
 import useToggle from "./hooks/useToggle";
@@ -23,6 +24,9 @@ function App() {
   const [animationEnabled, setAnimationEnabled] = useAnimations(false);
   const [products, setProducts] = useState([]);
 
+  const [cartDisplay, setCartDisplay] = useToggle(false);
+  const [cartItems, setCartItems] = useState([]);
+
   useEffect(() => {
     return setProducts([...inventory]);
   }, []);
@@ -31,18 +35,31 @@ function App() {
     return setAnimationEnabled;
   }, [expand]);
 
-  console.log(products);
+  const addToCart = (e, item) => {
+    setCartItems([item, ...cartItems]);
+  };
+
+  console.log("cart:", cartItems);
 
   return (
     <div className="App">
+      <Cart
+        cartItems={cartItems}
+        cartDisplay={cartDisplay}
+        setCartDisplay={setCartDisplay}
+      />
       <div
         id="left-pane"
         className={
           expand ? "lt-pane-expand" : animationEnabled ? "lt-pane-shrink" : null
         }
       >
-        <Nav toggleExpand={toggleExpand} toggle={expand} />
-        <Gallery toggle={expand} products={products} />
+        <Nav
+          toggleExpand={toggleExpand}
+          toggle={expand}
+          setCartDisplay={setCartDisplay}
+        />
+        <Gallery toggle={expand} products={products} addToCart={addToCart} />
         {!expand ? (
           <Greeting toggleExpand={toggleExpand} toggle={expand} />
         ) : null}

@@ -1,0 +1,38 @@
+@import "./globals.scss";
+
+.cart {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: -100vh;
+  left: 0;
+  text-align: center;
+  background-color: rgba($lt-blue, 0.95);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  z-index: 9999;
+
+  div:first-child {
+    position: relative;
+    background-color: #fff;
+    padding: 3rem;
+    border-radius: 3px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.view-cart {
+  animation: viewCart 1s ease 1 forwards;
+}
+
+@keyframes viewCart {
+  0% {
+    top: -100vh;
+  }
+  100% {
+    top: 0;
+  }
+}

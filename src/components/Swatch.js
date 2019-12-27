@@ -3,7 +3,7 @@ import React from "react";
 // Stylesheet
 import "../css/Swatch.scss";
 
-const Swatch = ({ product }) => {
+const Swatch = ({ product, addToCart }) => {
   return (
     <div className="product">
       <img
@@ -19,6 +19,9 @@ const Swatch = ({ product }) => {
         </li>
         <li>
           <span>Size:</span> {product.size}
+        </li>
+        <li>
+          <button onClick={e => addToCart(e, product)}>Add To Cart</button>
         </li>
       </ul>
     </div>

@@ -3,27 +3,27 @@ export const baseURL = "http://localhost:3000";
 export const inventory = [
   {
     id: 1,
-    name: "Ceramic Wire Brushed Hardwood",
+    name: "Stormy Haze",
     imgURL: "ceramic/1.jpg",
-    price: 3.25,
-    type: "ceramic",
+    price: 2.15,
+    type: "Ceramic",
     size: ""
   },
   {
     id: 2,
-    name: "Stone Wire Brushed Hardwood",
+    name: "Sahara Sandstone",
     imgURL: "stone/1.jpg",
-    price: 3.25,
-    type: "stone",
-    size: ""
+    price: 3.75,
+    type: "Stone",
+    size: "12 x 12"
   },
   {
     id: 3,
-    name: "Oak Brushed Hardwood",
+    name: "Darkwood Oak ",
     imgURL: "wood/1.png",
     price: 3.25,
     type: "wood",
-    size: "6 x 6"
+    size: "2 x 60"
   },
   {
     id: 4,
