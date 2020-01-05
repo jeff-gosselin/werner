@@ -2,8 +2,9 @@ import React from "react";
 
 // Stylesheet
 import "../css/Swatch.scss";
+import useToggle from "../hooks/useToggle";
 
-const Swatch = ({ product, addToCart }) => {
+const Swatch = ({ product, addToCart, quickViewItemHandler }) => {
   return (
     <div className="product">
       <img
@@ -21,7 +22,7 @@ const Swatch = ({ product, addToCart }) => {
           <span>Size:</span> {product.size}
         </li>
         <li>
-          <button onClick={e => addToCart(e, product)}>Add To Cart</button>
+          <button onClick={e => quickViewItemHandler(e, product)}>View</button>
         </li>
       </ul>
     </div>
@@ -29,3 +30,9 @@ const Swatch = ({ product, addToCart }) => {
 };
 
 export default Swatch;
+
+{
+  /* <li>
+          <button onClick={e => addToCart(e, product)}>Add To Cart</button>
+        </li> */
+}

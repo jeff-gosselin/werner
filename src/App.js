@@ -7,7 +7,7 @@ import { baseURL, inventory } from "./data";
 import Nav from "./components/Nav";
 import Greeting from "./components/Greeting";
 import Drawer from "./components/Drawer";
-import Search from "./components/Search";
+import QuickView from "./components/QuickView";
 import Image from "./components/Image";
 import Gallery from "./components/Gallery";
 import { Cart } from "./components/Cart";
@@ -24,6 +24,9 @@ function App() {
   const [animationEnabled, setAnimationEnabled] = useAnimations(false);
   const [products, setProducts] = useState([]);
 
+  const [quickView, setQuickView] = useToggle(false);
+  const [quickViewItem, setQuickViewItem] = useState(null);
+
   const [cartDisplay, setCartDisplay] = useToggle(false);
   const [cartItems, setCartItems] = useState([]);
 
@@ -39,6 +42,11 @@ function App() {
     setCartItems([item, ...cartItems]);
   };
 
+  const quickViewItemHandler = (e, item) => {
+    setQuickViewItem(item);
+    setQuickView();
+  };
+
   console.log("cart:", cartItems);
 
   return (
@@ -47,6 +55,13 @@ function App() {
         cartItems={cartItems}
         cartDisplay={cartDisplay}
         setCartDisplay={setCartDisplay}
+      />
+
+      <QuickView
+        item={quickViewItem}
+        quickView={quickView}
+        setQuickView={setQuickView}
+        addToCart={addToCart}
       />
       <div
         id="left-pane"
@@ -59,7 +74,12 @@ function App() {
           toggle={expand}
           setCartDisplay={setCartDisplay}
         />
-        <Gallery toggle={expand} products={products} addToCart={addToCart} />
+        <Gallery
+          toggle={expand}
+          products={products}
+          addToCart={addToCart}
+          quickViewItemHandler={quickViewItemHandler}
+        />
         {!expand ? (
           <Greeting toggleExpand={toggleExpand} toggle={expand} />
         ) : null}

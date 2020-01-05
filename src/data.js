@@ -51,11 +51,11 @@ export const inventory = [
   },
   {
     id: 7,
-    name: "Ceramic Wire Brushed Hardwood",
+    name: "Ceramic Fogwood",
     imgURL: "ceramic/3.jpg",
     price: 3.25,
     type: "ceramic",
-    size: ""
+    size: "12 x 12"
   },
   {
     id: 8,
@@ -63,7 +63,7 @@ export const inventory = [
     imgURL: "stone/3.jpg",
     price: 2.75,
     type: "stone",
-    size: ""
+    size: "16 x 16"
   },
   {
     id: 9,
@@ -83,11 +83,11 @@ export const inventory = [
   },
   {
     id: 11,
-    name: "Stone Wire Brushed Hardwood",
+    name: "Angled Limestone",
     imgURL: "stone/4.jpg",
     price: 3.25,
     type: "stone",
-    size: ""
+    size: "12 x 12"
   },
   {
     id: 12,

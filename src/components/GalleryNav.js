@@ -19,9 +19,7 @@ const GalleryNav = ({ displayType, setDisplayType, material }) => {
       <ul className="gallery-nav-links">
         {material === "ceramic" ? (
           <li className="active-link">
-            <div className="material" to="/ceramic">
-              Ceramic
-            </div>
+            <div className="material">Ceramic</div>
             <Link className="material" to="/">
               <FiXSquare className="close-btn" />
             </Link>
@@ -36,9 +34,7 @@ const GalleryNav = ({ displayType, setDisplayType, material }) => {
 
         {material === "stone" ? (
           <li className="active-link">
-            <div className="material" to="/stone">
-              Stone
-            </div>
+            <div className="material">Stone</div>
             <Link className="material" to="/">
               <FiXSquare className="close-btn" />
             </Link>
@@ -53,9 +49,7 @@ const GalleryNav = ({ displayType, setDisplayType, material }) => {
 
         {material === "wood" ? (
           <li className="active-link">
-            <div className="material" to="/wood">
-              Wood
-            </div>
+            <div className="material">Wood</div>
             <Link className="material" to="/">
               <FiXSquare className="close-btn" />
             </Link>

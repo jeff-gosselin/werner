@@ -19,18 +19,40 @@ import "../css/Gallery.scss";
 const Gallery = props => {
   let ceramic = props.products
     .filter(product => product.type === "ceramic")
-    .map(product => <Swatch product={product} addToCart={props.addToCart} />);
+    .map(product => (
+      <Swatch
+        product={product}
+        addToCart={props.addToCart}
+        quickViewItemHandler={props.quickViewItemHandler}
+      />
+    ));
 
   let stone = props.products
     .filter(product => product.type === "stone")
-    .map(product => <Swatch product={product} addToCart={props.addToCart} />);
+    .map(product => (
+      <Swatch
+        product={product}
+        addToCart={props.addToCart}
+        quickViewItemHandler={props.quickViewItemHandler}
+      />
+    ));
 
   let wood = props.products
     .filter(product => product.type === "wood")
-    .map(product => <Swatch product={product} addToCart={props.addToCart} />);
+    .map(product => (
+      <Swatch
+        product={product}
+        addToCart={props.addToCart}
+        quickViewItemHandler={props.quickViewItemHandler}
+      />
+    ));
 
   let all = props.products.map(product => (
-    <Swatch product={product} addToCart={props.addToCart} />
+    <Swatch
+      product={product}
+      addToCart={props.addToCart}
+      quickViewItemHandler={props.quickViewItemHandler}
+    />
   ));
 
   const [floorType, setFloorType] = useState("");
