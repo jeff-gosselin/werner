@@ -32,6 +32,10 @@ nav {
       &:hover {
         cursor: pointer;
       }
+
+      &.logo {
+        cursor: auto;
+      }
     }
   }
 }

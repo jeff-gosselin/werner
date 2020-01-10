@@ -16,7 +16,7 @@ const Nav = props => {
   return (
     <nav>
       <ul>
-        <li>
+        <li class="logo">
           <img src={Logo} alt="Werner Flooring & Tile Co." />
         </li>
         <li onClick={props.toggleExpand}>

@@ -91,11 +91,11 @@ export const inventory = [
   },
   {
     id: 12,
-    name: "Oak Brushed Hardwood",
+    name: "Striated Barkwood",
     imgURL: "wood/4.jpg",
     price: 3.25,
     type: "wood",
-    size: "6 x 6"
+    size: "12 x 12"
   },
   {
     id: 13,
@@ -115,11 +115,11 @@ export const inventory = [
   },
   {
     id: 15,
-    name: "Oak Brushed Hardwood",
+    name: "Natural Hardwood",
     imgURL: "wood/5.png",
     price: 3.25,
     type: "wood",
-    size: "6 x 6"
+    size: "12 x 12"
   },
   {
     id: 16,

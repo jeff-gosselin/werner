@@ -8,6 +8,7 @@ const Swatch = ({ product, addToCart, quickViewItemHandler }) => {
   return (
     <div className="product">
       <img
+        onClick={e => quickViewItemHandler(e, product)}
         className="tile-img"
         src={`${process.env.PUBLIC_URL}/samples/${product.imgURL}`}
         alt=""
