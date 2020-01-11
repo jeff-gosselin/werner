@@ -16,7 +16,7 @@ export const Item = ({ cartItem }) => {
           />
         </li>
         <li>{cartItem.name}</li>
-        <li>{cartItem.price}</li>
+        <li>${cartItem.subtotal}</li>
       </ul>
       <h3></h3>
     </div>

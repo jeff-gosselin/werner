@@ -38,8 +38,11 @@ function App() {
     return setAnimationEnabled;
   }, [expand]);
 
-  const addToCart = (e, item) => {
-    setCartItems([item, ...cartItems]);
+  const addToCart = (e, item, qty) => {
+    let subtotal = item.price * 20 * qty;
+    let itemWithSubtotal = { ...item, subtotal: subtotal };
+    console.log("XXXXXXX: ", itemWithSubtotal);
+    setCartItems([itemWithSubtotal, ...cartItems]);
   };
 
   const quickViewItemHandler = (e, item) => {
