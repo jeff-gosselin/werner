@@ -43,6 +43,7 @@ function App() {
     let itemWithSubtotal = { ...item, subtotal: subtotal };
     console.log("XXXXXXX: ", itemWithSubtotal);
     setCartItems([itemWithSubtotal, ...cartItems]);
+    setQuickView(false);
   };
 
   const quickViewItemHandler = (e, item) => {
