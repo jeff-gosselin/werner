@@ -15,12 +15,17 @@ const Swatch = ({ product, addToCart, quickViewItemHandler }) => {
       />
       <h3>{product.name}</h3>
       <ul className="details">
-        <li>{`$${product.price} / sqft`}</li>
         <li>
-          <span>Material:</span> {product.type}
+          <span>PRICE</span>
+          <p>{`$${product.price} / sqft`}</p>
         </li>
         <li>
-          <span>Size:</span> {product.size}
+          <span>Material</span>
+          <p>{product.type}</p>
+        </li>
+        <li>
+          <span>Size</span>
+          <p>{product.size}</p>
         </li>
         <li>
           <button onClick={e => quickViewItemHandler(e, product)}>View</button>

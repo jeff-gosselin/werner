@@ -1,12 +1,14 @@
 @import "./globals";
 
 .gallery-content {
-  height: calc(100vh - (9.7rem + #{$about-contact-ht} + 1rem));
+  height: calc(
+    100vh - (9.5rem + #{$about-contact-ht} + 1rem)
+  ); // Size the height of the Gallery Swatches area
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
   align-items: start;
   overflow: scroll;
-  padding: 1.25rem 4rem;
+  padding: 1rem 4rem;
   grid-gap: 2rem;
 }

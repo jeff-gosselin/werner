@@ -11,6 +11,10 @@
     cursor: pointer;
   }
 
+  h3 {
+    padding: 0.5rem 0;
+  }
+
   .tile-img {
     height: 180px;
     width: 180px;
@@ -18,28 +22,43 @@
 
   .details {
     list-style: none;
+    text-align: left;
 
-    li:not(:last-child) {
-      padding: 0.25rem 0;
+    li:first-child {
       border-top: 1px solid rgba(0, 0, 0, 0.2);
+      padding-top: 1rem;
     }
 
-    span {
-      font-weight: bold;
+    li {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.3rem 0;
+      font-size: 0.75rem;
+
+      span {
+        width: 6rem;
+        font-weight: bold;
+        color: $dk-gray;
+      }
+
+      p {
+        color: rgba($dk-gray, 0.75);
+      }
     }
 
     button {
       margin-top: 0.25rem;
       padding: 0.5rem 1rem;
-      width: 80%;
-      background-color: rgba($lt-blue, 0.9);
-      border-radius: 4px;
+      width: 100%;
+      background-color: $lt-blue;
+      border-radius: 2px;
       border: none;
       font-size: 0.75rem;
       color: #fff;
 
       &:hover {
         cursor: pointer;
+        background-color: $dk-blue;
       }
     }
   }
