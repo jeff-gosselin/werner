@@ -27,6 +27,7 @@ export const Cart = ({ cartItems, cartDisplay, setCartDisplay }) => {
         {myCart}
         <p>Total: ${total}</p>
       </div>
+      <div className="close-cart" onClick={setCartDisplay}></div>
     </div>
   );
 };

@@ -23,6 +23,16 @@
     grid-row-gap: 1.25rem;
     grid-column-gap: 2.5rem;
 
+    .close-btn {
+      font-size: 1.65rem;
+      color: rgba($gray, 0.5);
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin: 1rem;
+      cursor: pointer;
+    }
+
     &-title {
       grid-column: 2 / -1;
 
@@ -131,6 +141,7 @@
     &-cta {
       grid-column: 1 / -1;
       align-self: center;
+      padding: 2rem 0;
 
       button {
         width: 100%;

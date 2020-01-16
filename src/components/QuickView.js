@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 
+// React Icons
+import { FiXSquare } from "react-icons/fi";
+
 // Stylesheet
 import "../css/QuickView.scss";
 
@@ -22,6 +25,7 @@ const QuickView = ({ item, quickView, setQuickView, addToCart }) => {
     item && quickView ? (
       <div className="quick-view">
         <div className="quick-view-window">
+          <FiXSquare className="close-btn" onClick={setQuickView} />
           <img
             className="quick-view-window-img"
             src={`${process.env.PUBLIC_URL}/samples/${item.imgURL}`}
