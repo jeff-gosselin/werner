@@ -10,6 +10,7 @@ import Drawer from "./components/Drawer";
 import QuickView from "./components/QuickView";
 import Image from "./components/Image";
 import Gallery from "./components/Gallery";
+import ItemAddedMessage from "./components/ItemAddedMessage";
 import { Cart } from "./components/Cart";
 
 // Hooks
@@ -30,6 +31,10 @@ function App() {
   const [cartDisplay, setCartDisplay] = useToggle(false);
   const [cartItems, setCartItems] = useState([]);
 
+  const [qty, setQty] = useState(1);
+
+  const [addedToCartMessage, setAddedToCartMessage] = useToggle(false);
+
   useEffect(() => {
     return setProducts([...inventory]);
   }, []);
@@ -40,10 +45,12 @@ function App() {
 
   const addToCart = (e, item, qty) => {
     let subtotal = item.price * 20 * qty;
-    let itemWithSubtotal = { ...item, subtotal: subtotal };
+    let itemWithSubtotal = { ...item, qty: qty, subtotal: subtotal };
     console.log("XXXXXXX: ", itemWithSubtotal);
     setCartItems([itemWithSubtotal, ...cartItems]);
+    setQty(1);
     setQuickView(false);
+    setAddedToCartMessage();
   };
 
   const quickViewItemHandler = (e, item) => {
@@ -51,10 +58,13 @@ function App() {
     setQuickView();
   };
 
-  console.log("cart:", cartItems);
+  console.log("cart:", addedToCartMessage);
 
   return (
     <div className="App">
+      {addedToCartMessage ? (
+        <ItemAddedMessage setAddedToCartMessage={setAddedToCartMessage} />
+      ) : null}
       <Cart
         cartItems={cartItems}
         cartDisplay={cartDisplay}
@@ -66,6 +76,8 @@ function App() {
         quickView={quickView}
         setQuickView={setQuickView}
         addToCart={addToCart}
+        qty={qty}
+        setQty={setQty}
       />
       <div
         id="left-pane"
@@ -77,6 +89,7 @@ function App() {
           toggleExpand={toggleExpand}
           toggle={expand}
           setCartDisplay={setCartDisplay}
+          cartItems={cartItems}
         />
         <Gallery
           toggle={expand}

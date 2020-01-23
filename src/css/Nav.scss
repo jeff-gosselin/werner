@@ -27,6 +27,15 @@ nav {
         position: relative;
         top: -3.5px;
         font-size: 1.3rem;
+
+        p {
+          position: absolute;
+          font-size: 0.85rem;
+          color: $lt-blue;
+          top: -8px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
       }
 
       &:hover {

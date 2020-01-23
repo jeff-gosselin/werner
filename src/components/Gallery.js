@@ -18,7 +18,7 @@ import "../css/Gallery.scss";
 
 const Gallery = props => {
   let ceramic = props.products
-    .filter(product => product.type === "ceramic")
+    .filter(product => product.type === "Ceramic")
     .map(product => (
       <Swatch
         product={product}
@@ -28,7 +28,7 @@ const Gallery = props => {
     ));
 
   let stone = props.products
-    .filter(product => product.type === "stone")
+    .filter(product => product.type === "Stone")
     .map(product => (
       <Swatch
         product={product}
@@ -38,7 +38,7 @@ const Gallery = props => {
     ));
 
   let wood = props.products
-    .filter(product => product.type === "wood")
+    .filter(product => product.type === "Wood")
     .map(product => (
       <Swatch
         product={product}

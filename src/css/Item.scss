@@ -1,3 +1,5 @@
+@import "_globals.scss";
+
 .cart-item {
   display: flex;
   list-style: none;
@@ -5,15 +7,20 @@
   border-top: 1px dashed rgba(0, 0, 0, 0.2);
 
   li {
-    padding: 0.5rem 1rem;
+    padding: 0.75rem 1rem;
+    font-size: 1.1rem;
+
     &:first-child {
       line-height: 0;
     }
 
-    font-size: 1.1rem;
-
     &:last-child {
       margin-left: auto;
+    }
+
+    span {
+      font-weight: 400;
+      font-size: 0.9rem;
     }
   }
 }
@@ -21,4 +28,5 @@
 .item-img {
   width: 50px;
   height: 50px;
+  border: 1px solid $black;
 }

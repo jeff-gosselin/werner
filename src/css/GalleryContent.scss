@@ -5,7 +5,7 @@
     100vh - (9.5rem + #{$about-contact-ht} + 1rem)
   ); // Size the height of the Gallery Swatches area
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   justify-items: center;
   align-items: start;
   overflow: scroll;

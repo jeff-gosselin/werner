@@ -6,8 +6,11 @@ import "../css/Item.scss";
 export const Item = ({ cartItem }) => {
   // const [name, imgURL, price, size] = cartItem;
   return (
-    <div>
+    <div className="cart-item-container">
       <ul className="cart-item">
+        <li>
+          {cartItem.qty} &nbsp; <span>x</span>
+        </li>
         <li>
           <img
             className="item-img"
@@ -18,7 +21,6 @@ export const Item = ({ cartItem }) => {
         <li>{cartItem.name}</li>
         <li>${cartItem.subtotal}</li>
       </ul>
-      <h3></h3>
     </div>
   );
 };

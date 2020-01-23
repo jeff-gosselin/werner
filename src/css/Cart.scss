@@ -31,13 +31,37 @@
     position: absolute;
   }
 
-  div:first-child {
+  h2 {
+    padding: 0 0 1rem 0;
+  }
+
+  &-window {
     position: relative;
     background-color: #fff;
+    max-height: 90vh;
     padding: 3rem;
     border-radius: 3px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
     z-index: 99999;
+
+    &-items {
+      overflow: scroll;
+      max-height: 85%;
+    }
+  }
+
+  .total {
+    width: 100%;
+    text-align: right;
+    border-top: 1px dashed rgba(0, 0, 0, 0.2);
+    padding: 1rem 0;
+
+    span {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: $green;
+      padding: 0 1rem;
+    }
   }
 }
 

@@ -12,18 +12,19 @@ import { FaShoppingBasket } from "react-icons/fa";
 // Stylesheet
 import "../css/Nav.scss";
 
-const Nav = props => {
+const Nav = ({ toggle, toggleExpand, setCartDisplay, cartItems }) => {
   return (
     <nav>
       <ul>
         <li class="logo">
           <img src={Logo} alt="Werner Flooring & Tile Co." />
         </li>
-        <li onClick={props.toggleExpand}>
-          {props.toggle ? <Link to="/">Home</Link> : "Shop"}
+        <li onClick={toggleExpand}>
+          {toggle ? <Link to="/">Home</Link> : "Shop"}
         </li>
         <li>
-          <FaShoppingBasket onClick={props.setCartDisplay} />
+          <FaShoppingBasket onClick={setCartDisplay} />
+          <p>{cartItems.length > 0 ? cartItems.length : null}</p>
         </li>
       </ul>
     </nav>

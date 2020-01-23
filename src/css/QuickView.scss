@@ -58,6 +58,7 @@
       width: 100%;
       height: auto;
       grid-row: 1 / 5;
+      border: 1px solid $black;
     }
 
     &-info {
@@ -90,11 +91,19 @@
 
     &-subtotal {
       align-self: center;
+      display: flex;
+      align-items: center;
 
       h3 {
         color: $green;
         font-size: 1.25rem;
         padding: 0;
+        width: 6rem;
+      }
+
+      p {
+        font-size: 0.9rem;
+        color: rgba($dk-gray, 0.75);
       }
     }
 
