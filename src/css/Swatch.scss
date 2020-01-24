@@ -1,10 +1,9 @@
 @import "./_globals.scss";
 
-.product {
+.product-grid {
   margin-bottom: 2rem;
   text-align: center;
   max-width: 180px;
-  // box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.5);
   padding-bottom: 3rem;
 
   img:hover {
@@ -27,6 +26,83 @@
 
     li:first-child {
       border-top: 1px solid rgba(0, 0, 0, 0.2);
+      padding-top: 1rem;
+    }
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.3rem 0;
+      font-size: 0.75rem;
+
+      span {
+        width: 6rem;
+        font-weight: bold;
+        color: rgba($dk-gray, 0.9);
+      }
+
+      p {
+        color: rgba($dk-gray, 0.75);
+      }
+    }
+
+    button {
+      margin-top: 0.25rem;
+      padding: 0.5rem 1rem;
+      width: 100%;
+      background-color: $lt-blue;
+      border-radius: 2px;
+      border: none;
+      font-size: 0.75rem;
+      color: #fff;
+
+      &:hover {
+        cursor: pointer;
+        background-color: $dk-blue;
+      }
+    }
+  }
+}
+
+.product-list {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  // margin-bottom: 2rem;
+  // text-align: center;
+  width: 80vw;
+  padding-bottom: 3rem;
+
+  img:hover {
+    cursor: pointer;
+  }
+
+  h3 {
+    padding: 0.5rem 0;
+    color: $dk-blue;
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    margin-right: auto;
+    position: relative;
+    top: -4rem;
+    border-bottom: 1px solid rgba($dk-gray, 0.3);
+    flex: 1;
+  }
+
+  .tile-img {
+    height: 150px;
+    width: 150px;
+  }
+
+  .details {
+    list-style: none;
+    text-align: left;
+    position: absolute;
+    margin-left: calc(1rem + 150px);
+
+    li:first-child {
+      // border-top: 1px solid rgba(0, 0, 0, 0.2);
       padding-top: 1rem;
     }
 

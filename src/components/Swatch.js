@@ -4,9 +4,9 @@ import React from "react";
 import "../css/Swatch.scss";
 import useToggle from "../hooks/useToggle";
 
-const Swatch = ({ product, addToCart, quickViewItemHandler }) => {
+const Swatch = ({ product, displayType, quickViewItemHandler }) => {
   return (
-    <div className="product">
+    <div className={displayType ? "product-list" : "product-grid"}>
       <img
         onClick={e => quickViewItemHandler(e, product)}
         className="tile-img"

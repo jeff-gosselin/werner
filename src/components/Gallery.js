@@ -17,12 +17,15 @@ import { FaChevronUp } from "react-icons/fa";
 import "../css/Gallery.scss";
 
 const Gallery = props => {
+  const [displayType, setDisplayType] = useToggle(false);
+
   let ceramic = props.products
     .filter(product => product.type === "Ceramic")
     .map(product => (
       <Swatch
         product={product}
         addToCart={props.addToCart}
+        displayType={displayType}
         quickViewItemHandler={props.quickViewItemHandler}
       />
     ));
@@ -33,6 +36,7 @@ const Gallery = props => {
       <Swatch
         product={product}
         addToCart={props.addToCart}
+        displayType={displayType}
         quickViewItemHandler={props.quickViewItemHandler}
       />
     ));
@@ -43,6 +47,7 @@ const Gallery = props => {
       <Swatch
         product={product}
         addToCart={props.addToCart}
+        displayType={displayType}
         quickViewItemHandler={props.quickViewItemHandler}
       />
     ));
@@ -51,6 +56,7 @@ const Gallery = props => {
     <Swatch
       product={product}
       addToCart={props.addToCart}
+      displayType={displayType}
       quickViewItemHandler={props.quickViewItemHandler}
     />
   ));
@@ -66,23 +72,48 @@ const Gallery = props => {
           exact
           path="/ceramic"
           render={() => (
-            <GalleryContent products={ceramic} material="ceramic" />
+            <GalleryContent
+              products={ceramic}
+              displayType={displayType}
+              setDisplayType={setDisplayType}
+              material="ceramic"
+            />
           )}
         />
         <Route
           exact
           path="/stone"
-          render={() => <GalleryContent products={stone} material="stone" />}
+          render={() => (
+            <GalleryContent
+              products={stone}
+              displayType={displayType}
+              setDisplayType={setDisplayType}
+              material="stone"
+            />
+          )}
         />
         <Route
           exact
           path="/wood"
-          render={() => <GalleryContent products={wood} material="wood" />}
+          render={() => (
+            <GalleryContent
+              products={wood}
+              displayType={displayType}
+              setDisplayType={setDisplayType}
+              material="wood"
+            />
+          )}
         />
         <Route
           exact
           path="/"
-          render={() => <GalleryContent products={all} />}
+          render={() => (
+            <GalleryContent
+              products={all}
+              displayType={displayType}
+              setDisplayType={setDisplayType}
+            />
+          )}
         />
       </Switch>
     </div>

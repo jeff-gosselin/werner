@@ -9,8 +9,12 @@ import useToggle from "../hooks/useToggle";
 // Stylesheet
 import "../css/GalleryContent.scss";
 
-const GalleryContent = ({ products, material }) => {
-  const [displayType, setDisplayType] = useToggle(false);
+const GalleryContent = ({
+  products,
+  displayType,
+  setDisplayType,
+  material
+}) => {
   return (
     <div>
       <GalleryNav
