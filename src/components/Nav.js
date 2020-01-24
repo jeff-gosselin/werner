@@ -24,7 +24,9 @@ const Nav = ({ toggle, toggleExpand, setCartDisplay, cartItems }) => {
         </li>
         <li>
           <FaShoppingBasket onClick={setCartDisplay} />
-          <p>{cartItems.length > 0 ? cartItems.length : null}</p>
+          <p className="cart-counter">
+            {cartItems.length > 0 ? cartItems.length : null}
+          </p>
         </li>
       </ul>
     </nav>

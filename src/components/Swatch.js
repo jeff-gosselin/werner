@@ -20,11 +20,11 @@ const Swatch = ({ product, addToCart, quickViewItemHandler }) => {
           <p>{`$${product.price} / sqft`}</p>
         </li>
         <li>
-          <span>Material</span>
+          <span>MATERIAL</span>
           <p>{product.type}</p>
         </li>
         <li>
-          <span>Size</span>
+          <span>SIZE</span>
           <p>{product.size}</p>
         </li>
         <li>

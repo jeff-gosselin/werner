@@ -13,6 +13,7 @@
 
   h3 {
     padding: 0.5rem 0;
+    color: $dk-blue;
   }
 
   .tile-img {
@@ -38,7 +39,7 @@
       span {
         width: 6rem;
         font-weight: bold;
-        color: $dk-gray;
+        color: rgba($dk-gray, 0.9);
       }
 
       p {
