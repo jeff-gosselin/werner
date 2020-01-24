@@ -18,7 +18,13 @@ const GalleryContent = ({ products, material }) => {
         setDisplayType={setDisplayType}
         material={material}
       />
-      <div className="gallery-content">{products}</div>
+      <div
+        className={
+          displayType ? "gallery-content-list" : "gallery-content-grid"
+        }
+      >
+        {products}
+      </div>
     </div>
   );
 };

@@ -1,6 +1,19 @@
 @import "./globals";
 
-.gallery-content {
+.gallery-content-list {
+  height: calc(
+    100vh - (9.5rem + #{$about-contact-ht} + 1rem)
+  ); // Size the height of the Gallery Swatches area
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  overflow: scroll;
+  padding: 1rem 4rem;
+  grid-gap: 2rem;
+}
+
+.gallery-content-grid {
   height: calc(
     100vh - (9.5rem + #{$about-contact-ht} + 1rem)
   ); // Size the height of the Gallery Swatches area
