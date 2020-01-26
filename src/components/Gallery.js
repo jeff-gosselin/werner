@@ -61,9 +61,31 @@ const Gallery = props => {
     />
   ));
 
-  const [floorType, setFloorType] = useState("");
+  let sortedMinToMax = props.products
+    .sort((a, b) => a.price - b.price)
+    .map(product => (
+      <Swatch
+        product={product}
+        addToCart={props.addToCart}
+        displayType={displayType}
+        quickViewItemHandler={props.quickViewItemHandler}
+      />
+    ));
 
-  console.log("all", all);
+  let sortedMaxToMin = props.products
+    .sort((a, b) => b.price - a.price)
+    .map(product => (
+      <Swatch
+        product={product}
+        addToCart={props.addToCart}
+        displayType={displayType}
+        quickViewItemHandler={props.quickViewItemHandler}
+      />
+    ));
+
+  // const [floorType, setFloorType] = useState("");
+
+  console.log("sorted", sortedMinToMax);
 
   return (
     <div className={props.toggle ? "gallery show" : "gallery hide"}>
