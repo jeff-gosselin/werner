@@ -5,7 +5,7 @@
   opacity: 0;
   animation: fadeIn 0.75s ease 1.15s 1 forwards;
   height: calc(100% - (#{$about-contact-ht} + 1rem));
-  padding-bottom: 2rem;
+  // padding-bottom: 2rem;
 }
 
 /**** Styles for About Drawer */
@@ -42,17 +42,37 @@
 
     &-image {
       position: relative;
-      background: url("https://sundialins-staging.websitesrvr.com/wp-content/uploads/sites/341/2018/03/5-Tips-for-Saving-Money-on-Employee-Benefits.jpg");
+      // background: url("https://sundialins-staging.websitesrvr.com/wp-content/uploads/sites/341/2018/03/5-Tips-for-Saving-Money-on-Employee-Benefits.jpg");
+      background: url("https://www.gannett-cdn.com/-mm-/b2b05a4ab25f4fca0316459e1c7404c537a89702/c=0-0-1365-768/local/-/media/2018/08/28/USATODAY/usatsports/business-people-six-figure-jobs.jpg");
       width: 100%;
-      min-height: 200px;
+      min-height: 320px;
       background-size: cover;
-      background-position: center;
+      background-position: top;
     }
 
-    h3 {
-      margin-top: 2.5rem;
-      font-size: 1.35rem;
-      font-weight: 500;
+    &-who {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-top: 2rem;
+
+      div:first-child {
+        margin-right: 2rem;
+      }
+
+      div:last-child {
+        margin-bottom: 2rem;
+      }
+
+      &-icon {
+        font-size: 3rem;
+      }
+
+      h3 {
+        font-size: 1.35rem;
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+      }
     }
 
     p {
