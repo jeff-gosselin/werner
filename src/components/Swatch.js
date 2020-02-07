@@ -13,7 +13,7 @@ const Swatch = ({ product, displayType, quickViewItemHandler }) => {
         src={`${process.env.PUBLIC_URL}/samples/${product.imgURL}`}
         alt=""
       />
-      <h3>{product.name}</h3>
+      <h3 onClick={e => quickViewItemHandler(e, product)}>{product.name}</h3>
       <ul className="details">
         <li>
           <span>PRICE</span>
