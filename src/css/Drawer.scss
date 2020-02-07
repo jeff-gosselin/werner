@@ -39,6 +39,10 @@
     padding: 1rem 3rem;
     height: 100%;
     overflow: scroll;
+    background: linear-gradient(
+      $dk-blue,
+      rgba($black, 0.5)
+    ); // Change color of About section
 
     &-image {
       position: relative;
@@ -57,7 +61,7 @@
       margin-top: 2rem;
 
       div:first-child {
-        margin-right: 2rem;
+        // margin-top: -10rem;
       }
 
       div:last-child {
@@ -65,7 +69,12 @@
       }
 
       &-icon {
-        font-size: 3rem;
+        font-size: 4rem;
+        opacity: 0.5;
+        text-align: center;
+        padding: 0 2rem;
+        min-width: 4rem;
+        flex: 1;
       }
 
       h3 {
@@ -73,6 +82,15 @@
         font-weight: 500;
         margin-bottom: 0.5rem;
       }
+
+      .first {
+        font-size: 4.75rem;
+        margin-top: -0.75rem;
+      }
+    }
+
+    .paragraph {
+      flex: 4;
     }
 
     p {
@@ -80,6 +98,7 @@
       line-height: 1.25rem;
       font-weight: 300;
       opacity: 0.75;
+      margin-right: auto;
     }
   }
 }
@@ -112,6 +131,10 @@
     height: 100%;
     justify-content: center;
     align-items: center;
+    background: linear-gradient(
+      $dk-blue,
+      rgba($black, 0.5)
+    ); // Change color of About section
 
     form {
       display: flex;
@@ -122,6 +145,7 @@
 
       input,
       textarea {
+        font-family: "Lato", sans-serif;
         margin-bottom: 1rem;
         padding: 0.5rem;
         background-color: transparent;
@@ -136,6 +160,16 @@
         border-bottom: 2px solid $white;
       }
 
+      textarea {
+        resize: vertical;
+        min-height: 60px;
+        max-height: 200px;
+
+        &::placeholder {
+          font-family: "Lato", sans-serif;
+        }
+      }
+
       button {
         width: 100px;
         height: 40px;
@@ -145,6 +179,13 @@
         border: 2px solid $white;
         color: $white;
         font-size: 1rem;
+        transition-duration: 1s;
+
+        &:hover {
+          background-color: $white;
+          color: $dk-blue;
+          cursor: pointer;
+        }
       }
     }
   }

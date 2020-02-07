@@ -20,7 +20,13 @@ const Nav = ({ toggle, toggleExpand, setCartDisplay, cartItems }) => {
           <img src={Logo} alt="Werner Flooring & Tile Co." />
         </li>
         <li onClick={toggleExpand}>
-          {toggle ? <Link to="/">Home</Link> : "Shop"}
+          {toggle ? (
+            <Link className="home" to="/">
+              Home
+            </Link>
+          ) : (
+            "Shop"
+          )}
         </li>
         <li>
           <FaShoppingBasket onClick={setCartDisplay} />

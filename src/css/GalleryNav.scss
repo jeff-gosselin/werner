@@ -47,6 +47,7 @@
       padding: 0.275rem 0.5rem 0.235rem 0.65rem;
       font-size: 1rem;
       top: 1px;
+      transition-duration: 1s;
 
       &:last-child {
         margin-left: auto;
@@ -59,6 +60,17 @@
           cursor: pointer;
           color: $black;
         }
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .gallery-nav {
+    &-links {
+      margin: 0 1.5rem;
+      li:not(:last-child) {
+        margin: 0.5rem 0.5rem !important;
       }
     }
   }

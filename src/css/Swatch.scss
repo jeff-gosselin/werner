@@ -83,7 +83,7 @@
   h3 {
     padding: 0.5rem 0;
     color: $dk-blue;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     margin-left: 1.25rem;
     margin-right: auto;
     position: relative;
@@ -139,6 +139,62 @@
       &:hover {
         cursor: pointer;
         background-color: $dk-blue;
+      }
+    }
+  }
+}
+
+// Media Queries
+@media (max-width: 800px) {
+  .product-list {
+    padding-bottom: 1.5rem;
+
+    h3 {
+      font-size: 1.25rem;
+      top: -1.75rem;
+    }
+    .product-info {
+      font-size: 1rem !important;
+    }
+
+    .tile-img {
+      width: 75px !important;
+      height: 75px !important;
+    }
+
+    .details {
+      margin-left: calc(1rem + 75px);
+
+      button {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 430px) {
+  .product-list {
+    padding-bottom: 1.5rem;
+
+    h3 {
+      font-size: 1.25rem;
+      top: -1.75rem;
+    }
+    .product-info {
+      font-size: 1rem !important;
+      display: none;
+    }
+
+    .tile-img {
+      width: 75px !important;
+      height: 75px !important;
+    }
+
+    .details {
+      display: none;
+
+      button {
+        display: none;
       }
     }
   }

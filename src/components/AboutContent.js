@@ -15,10 +15,10 @@ const AboutContent = () => {
         <div className="about-content-image"></div>
 
         <div className="about-content-who">
-          <div className="about-content-who-icon">
+          <div className="about-content-who-icon first">
             <IoIosPeople />
           </div>
-          <div>
+          <div className="paragraph">
             <h3>Who We Are</h3>
             <p>
               Commodo sit consectetur commodo cupidatat officia quis dolor ex.
@@ -33,7 +33,7 @@ const AboutContent = () => {
           <div className="about-content-who-icon">
             <GiOpenBook />
           </div>
-          <div>
+          <div className="paragraph">
             <h3>Our Story</h3>
             <p>
               Quis velit consequat id consequat labore nostrud qui quis non. Id
@@ -50,7 +50,7 @@ const AboutContent = () => {
           <div className="about-content-who-icon">
             <IoIosRocket />
           </div>
-          <div>
+          <div className="paragraph">
             <h3>Our Mission</h3>
             <p>
               Consequat labore nostrud qui quis non. Id laboris ullamco amet
