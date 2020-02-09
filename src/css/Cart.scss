@@ -77,3 +77,23 @@
     top: 0;
   }
 }
+
+// Media Queries
+@media (max-width: 580px) {
+  .cart-window {
+    width: 100vw;
+    padding: 3rem 1rem !important;
+  }
+  .cart-item li {
+    font-size: 0.9rem;
+    padding: 0.75rem 0.5rem;
+  }
+
+  .cart {
+    .total {
+      span {
+        padding: 0 0.5rem;
+      }
+    }
+  }
+}
