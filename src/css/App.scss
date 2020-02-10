@@ -81,6 +81,16 @@
   }
 }
 
+@keyframes stayShrunkRight {
+  0% {
+    width: 0vw;
+  }
+
+  100% {
+    width: 0vw;
+  }
+}
+
 // Media Queries
 @media (max-width: 600px) {
   #left-pane {
@@ -89,5 +99,9 @@
 
   #right-pane {
     width: 0vw !important;
+  }
+
+  .rt-pane-expand {
+    animation: stayShrunkRight 1.5s ease 0s 1 forwards;
   }
 }
