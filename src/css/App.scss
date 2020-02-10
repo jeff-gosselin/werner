@@ -61,6 +61,16 @@
   }
 }
 
+@keyframes dontShrinkLeft {
+  0% {
+    width: 100vw;
+  }
+
+  100% {
+    width: 100vw;
+  }
+}
+
 @keyframes expandRight {
   0% {
     width: 0vw;
@@ -103,5 +113,9 @@
 
   .rt-pane-expand {
     animation: stayShrunkRight 1.5s ease 0s 1 forwards;
+  }
+
+  .lt-pane-shrink {
+    animation: dontShrinkLeft 1.5s ease 0s 1 forwards;
   }
 }
